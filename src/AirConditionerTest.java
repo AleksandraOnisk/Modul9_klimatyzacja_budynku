@@ -3,14 +3,13 @@ public class AirConditionerTest {
         AirConditioner proConditioner = new ProAirConditioner("Pro", 25);
         Room room = new Room("pokój 1", 24, true, 20);
         System.out.println(room.printInfo());
-        System.out.println(proConditioner.printInfo());
-        System.out.println(AirConditioner.decreaseTemperatuere(room));
+        ProAirConditioner.tempRoomAfterChange(room);
+
 
         AirConditioner basicConditioner = new BasicAirConditioner("Basic", 25);
         Room room2 = new Room("pokój 2", 23, true, 50);
         System.out.println(room2.printInfo());
-        System.out.println(basicConditioner.printInfo());
-        System.out.println(BasicAirConditioner.decreaseTemperatuere(room2));
+        BasicAirConditioner.tempRoomAfterChange(room);
 
     }
 

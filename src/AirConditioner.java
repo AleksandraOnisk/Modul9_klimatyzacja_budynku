@@ -1,6 +1,6 @@
 public abstract class AirConditioner {
     private String type;
-    public  double targetTemp;
+    public static double targetTemp;
 
     public AirConditioner(String type, double targetTemp) {
         this.type = type;
@@ -11,8 +11,11 @@ public abstract class AirConditioner {
         return targetTemp;
     }
 
-    public static double decreaseTemperatuere(Room room) {
-        return room.getActualTemperature() -1;
+    public static double tempRoomAfterChange(Room room) {
+        if (room.getActualTemperature() < targetTemp){
+            return room.getActualTemperature() -1;
+        }
+        return room.getActualTemperature();
     }
 
 
