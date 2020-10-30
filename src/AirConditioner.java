@@ -1,4 +1,4 @@
-public class AirConditioner {
+public abstract class AirConditioner {
     private String type;
     public  double targetTemp;
 
@@ -11,12 +11,10 @@ public class AirConditioner {
         return targetTemp;
     }
 
-    public double decreaseTemperatuere(Room room) {
-        if (room.getActualTemperature() < targetTemp) {
-            return  room.getActualTemperature() - 1;
-        }
-        return getTargetTemp();
+    public static double decreaseTemperatuere(Room room) {
+        return room.getActualTemperature() -1;
     }
+
 
     public String printInfo(){
         return "Typ klimatyzatora: " + type + ", docelowa temperatura: " + targetTemp;
