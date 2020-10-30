@@ -5,7 +5,7 @@ public class BasicAirConditioner extends AirConditioner {
     @Override
     public double decreaseTemperatuere(Room room) {
         if (room.getActualTemperature() < targetTemp) {
-            return room.getActualTemperature() - (1/ room.getSize());
+            return  room.getActualTemperature() - 1/room.getSize();
         }
         return getTargetTemp();
     }

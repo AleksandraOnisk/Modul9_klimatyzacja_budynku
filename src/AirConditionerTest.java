@@ -8,9 +8,9 @@ public class AirConditionerTest {
 
         AirConditioner basicConditioner = new BasicAirConditioner("Basic", 25);
         Room room2 = new Room("pokój 2", 23, true, 50);
-        System.out.println(room.printInfo());
+        System.out.println(room2.printInfo());
         System.out.println(basicConditioner.printInfo());
-        System.out.println(basicConditioner.decreaseTemperatuere(room));
+        System.out.println(basicConditioner.decreaseTemperatuere(room2));
     }
 
 }

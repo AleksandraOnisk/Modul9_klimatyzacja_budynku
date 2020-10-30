@@ -13,7 +13,7 @@ public class AirConditioner {
 
     public double decreaseTemperatuere(Room room) {
         if (room.getActualTemperature() < targetTemp) {
-            return room.getActualTemperature() - 1;
+            return  room.getActualTemperature() - 1;
         }
         return getTargetTemp();
     }
